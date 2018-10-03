@@ -1,0 +1,20 @@
+*{
+        font-family: 'Courier New', Courier, monospace;
+}
+
+.header{
+        color: blue;
+}
+h2{
+        text-align: center;
+}
+
+.submit-btn{
+        margin-top: 5px;
+}
+.danger{
+        color: red;
+}
+.success{
+        color:green;
+}
