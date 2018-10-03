@@ -18,3 +18,26 @@ h2{
 .success{
         color:green;
 }
+
+div.container{
+        margin-top: 60px;
+        padding: 0px;
+}
+
+div.row div.form-container{
+        margin-top: 25px;
+}
+
+.navbar-header a.navbar-brand{
+        color: white;
+}
+.navbar-nav li  a#anchor{
+        text-decoration: none;
+        color: white;
+}
+/* .navbar-nav li  a#anchor:hover{
+        text-decoration: none;
+} */
+.navbar{
+        background-color: #4ba2ea;
+}

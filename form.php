@@ -1,5 +1,9 @@
 <?php
-// include 'post.php';
+session_start();
+if(!isset($_SESSION["username"]) && !isset($_SESSION["password"]))
+{
+ header("location:login.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +20,20 @@
 </head>
 <body>
         <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-inverse" role="navigation">
+                          <div class="container-fluid">
+                                     <div class="navbar-header">
+                                       <a class="navbar-brand" href="#">Real Milk</a>
+                                     </div>
+                                     <ul class="nav navbar-nav">
+                                       <li class="active"><a href="logout.php" id="anchor">Logout</a></li>
+                                     </ul>
+                          </div>
+                        </nav>
+                </div>
+            </div>
                <div class="row">
                    <div class="col-sm-4"></div>
                    <div class="col-sm-4 form-container">
@@ -99,8 +117,8 @@
 
         // adding table data
         $('.add-more').click(function(){
-            var value ='add';
-            var name = $('#input-label-add').val();
+            let value ='add';
+            let name = $('#input-label-add').val();
             if(name !=''){
               $.ajax({
                   type:"POST",
@@ -126,8 +144,8 @@
 
         // When Submit Button Click
          $('#submit').click(function(){
-             var valid = true;
-             var names=[];
+             let valid = true;
+             let names=[];
 
              //getting all table data values
              $('td').each(function(){
@@ -144,7 +162,7 @@
              });
 
              //getting input field values
-             var amount = $('input[name^=empnames]').map(function(index,elem){
+             let amount = $('input[name^=empnames]').map(function(index,elem){
                  return $(elem).val();
              }).get();
 
